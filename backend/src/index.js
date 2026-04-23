@@ -9,6 +9,7 @@ app.use(express.json())
 app.use('/auth', require('./routes/auth.routes'))
 app.use('/jobs', require('./routes/jobs.routes'))
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`)
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
 })
